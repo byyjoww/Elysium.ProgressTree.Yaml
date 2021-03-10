@@ -1,0 +1,11 @@
+---
+requirements:
+- name: testing1
+  cost: 0
+  dependencies:
+    testing2: 1
+    testing3: 2
+- name: testing2
+  cost: 0
+  dependencies:
+    testing3: 1

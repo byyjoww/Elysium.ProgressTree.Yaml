@@ -1,0 +1,17 @@
+{
+    "name": "elysium.progresstree.yaml.runtime",
+    "references": [
+        "GUID:2d400bc5bce43d44b85c182415c1b981",
+        "GUID:5ed019a3828e9dd418553c3290ee82cc",
+        "GUID:b3f49edfedc855a48aa1a9e5d3cba438"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

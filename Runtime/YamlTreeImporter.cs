@@ -4,7 +4,12 @@ namespace Elysium.ProgressTree.Yaml
 {
     public class YamlTreeImporter : TreeImporter
     {
-        protected override void Import() => ProgressTree = ProgressTree.Create().FromYaml(nodeElementDatabase.ElementsAsInterface, dependencyDatabase.ElementsAsInterface, importedTextAsset);
+        protected override void Import()
+        {
+            ProgressTree = ProgressTree
+                .Create(nodeElementDatabase.ElementsAsInterface, dependencyDatabase.ElementsAsInterface)
+                .FromYaml(importedTextAsset);
+        }
 
         protected override bool IsValidFormat()
         {

@@ -1,19 +1,15 @@
-﻿using Elysium.ProgressTree.Json;
-using Elysium.ProgressTree.Yaml;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-namespace Elysium.ProgressTree
+namespace Elysium.ProgressTree.Yaml
 {
-    public partial class ProgressTree
+    public static class ProgressTreeFactoryYamlExtension
     {
-        public static ProgressTree FromYaml(INodeElement[] _allNodeElements, INodeElement[] _allDependencies, TextAsset _yaml)
+        public static ProgressTree FromYaml(this ProgressTree _tree, INodeElement[] _allNodeElements, INodeElement[] _allDependencies, TextAsset _yaml)
         {
             Debug.Log($"Building progressTree from YAML:\n{_yaml.text}");
-
             ITreeRequirement[] requirements = YamlRequirementCollection.FromYaml(_yaml.text);
-            return new ProgressTree(_allNodeElements, _allDependencies, requirements);
+            _tree.Build(_allNodeElements, _allDependencies, requirements);
+            return _tree;
         }
     }
 }
